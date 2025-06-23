@@ -5,7 +5,7 @@ const projects = [
   {
     title: 'Portfolio Website',
     description: 'A modern portfolio built using React and Tailwind CSS. It’s fully responsive and showcases my skills and contact info.',
-    github: 'https://github.com/your_username/portfolio',
+    github: 'https://github.com/darshkashyap/Portfolio-Website',
   
   },
   {
