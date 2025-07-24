@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -7,15 +8,15 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
         {/* Logo / Name */}
         <div className="text-3xl font-bold tracking-wide text-blue-400 hover:text-white transition duration-300">
-        <a href="/">Darsh Kashyap</a>  
+          <Link to="/">Darsh Kashyap</Link>
         </div>
 
         {/* Navigation Links */}
         <nav className="flex gap-6 mt-4 md:mt-0 text-lg">
-          <a href="/about" className="hover:text-blue-400 transition duration-200">About</a>
-          <a href="/projects" className="hover:text-blue-400 transition duration-200">Projects</a>
-          <a href="/skills" className="hover:text-blue-400 transition duration-200">Skills</a>
-          <a href="/contact" className="hover:text-blue-400 transition duration-200">Contact</a>
+          <Link to="/about" className="hover:text-blue-400 transition duration-200">About</Link>
+          <Link to="/projects" className="hover:text-blue-400 transition duration-200">Projects</Link>
+          <Link to="/skills" className="hover:text-blue-400 transition duration-200">Skills</Link>
+          <Link to="/contact" className="hover:text-blue-400 transition duration-200">Contact</Link>
         </nav>
 
         {/* Social Icons */}
@@ -36,3 +37,4 @@ const Header = () => {
 }
 
 export default Header
+
