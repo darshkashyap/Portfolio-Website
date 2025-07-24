@@ -1,26 +1,38 @@
-import React from 'react';
+import React from 'react'
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
 
-function Header() {
+const Header = () => {
   return (
-    <div className="flex justify-center items-center py-12 bg-black">
-      <div className="bg-gray-900 border border-gray-800 rounded-2xl shadow-xl p-10 w-full max-w-4xl text-center">
-        <img
-          src="/Darsh.png" 
-          alt="Darsh Kashyap"
-          className="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-cyan-400 object-cover"
-        />
+    <header className="bg-black text-white py-8 shadow-md">
+      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+        {/* Logo / Name */}
+        <div className="text-3xl font-bold tracking-wide text-blue-400 hover:text-white transition duration-300">
+        <a href="/">Darsh Kashyap</a>  
+        </div>
 
-        <h1 className="text-4xl font-extrabold mb-4">
-          Hi, My Name is <span className="text-white">Darsh Kashyap👨🏽‍💻</span>
-        </h1>
-        <p className="text-lg text-gray-300 leading-relaxed font-semibold">
-          I'm a 17-year-old full-stack developer with a passion for building modern, responsive web applications.
-          <br />
-          I specialize in working with technologies like React, Node.js, Express, and MongoDB.
-        </p>
+        {/* Navigation Links */}
+        <nav className="flex gap-6 mt-4 md:mt-0 text-lg">
+          <a href="/about" className="hover:text-blue-400 transition duration-200">About</a>
+          <a href="/projects" className="hover:text-blue-400 transition duration-200">Projects</a>
+          <a href="/skills" className="hover:text-blue-400 transition duration-200">Skills</a>
+          <a href="/contact" className="hover:text-blue-400 transition duration-200">Contact</a>
+        </nav>
+
+        {/* Social Icons */}
+        <div className="flex gap-4 mt-4 md:mt-0 text-xl">
+          <a href="https://github.com/darshkashyap" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
+            <FaGithub />
+          </a>
+          <a href="https://www.linkedin.com/in/darsh-kashyap-020163369/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
+            <FaLinkedin />
+          </a>
+          <a href="https://x.com/imustbedarsh" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
+            <FaTwitter />
+          </a>
+        </div>
       </div>
-    </div>
-  );
+    </header>
+  )
 }
 
-export default Header;
+export default Header
