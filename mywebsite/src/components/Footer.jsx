@@ -22,7 +22,7 @@ const Footer = () => {
             href="https://github.com/darshkashyap"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-white transition duration-300"
+            className="hover:text-gray-900 transition duration-300"
           >
             <FaGithub />
           </a>
@@ -38,7 +38,7 @@ const Footer = () => {
             href="https://x.com/imustbedarsh"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-white transition duration-300"
+            className="hover:text-blue-500 transition duration-300"
           >
             <FaTwitter />
           </a>
@@ -46,7 +46,7 @@ const Footer = () => {
             href="https://www.instagram.com/imustbedarsh"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-white transition duration-300"
+            className="hover:text-pink-600 transition duration-300"
           >
             <FaInstagram />
           </a>
@@ -54,7 +54,7 @@ const Footer = () => {
             href="https://discord.com/users/732843910111428679"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-white transition duration-300"
+            className="hover:text-blue-950 transition duration-300"
           >
             <FaDiscord />
           </a>
