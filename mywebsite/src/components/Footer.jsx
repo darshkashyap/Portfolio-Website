@@ -22,7 +22,7 @@ const Footer = () => {
             href="https://github.com/darshkashyap"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-gray-900 transition duration-300"
+            className="hover:text-blue-400 transition duration-300"
           >
             <FaGithub />
           </a>
