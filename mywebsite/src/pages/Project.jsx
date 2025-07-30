@@ -16,6 +16,10 @@ const projects = [
     link: 'https://github.com/darshkashyap/Weather-App',
     description: 'A simple weather app using OpenWeatherMap API to show real-time weather data by city name.',
   },
+  {
+    title: 'BlogApp Fulstack',
+    link: 'https://github.com/darshkashyap/BlogApp',
+    description: 'A full-stack blog application with user authentication, CRUD operations, and a responsive design.',}
 ];
 
 const Project = () => {
