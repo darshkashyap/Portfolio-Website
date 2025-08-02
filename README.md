@@ -46,18 +46,6 @@ my-portfolio/
 
 ---
 
-## 📷 Screenshots
-
-> You can add images like this once deployed:
-
-
----
-
-## 🔗 Live Demo
-
-🌐 [your-portfolio-site.com](https://your-portfolio-site.com)
-
----
 
 ## 🛠️ Setup & Run Locally
 
