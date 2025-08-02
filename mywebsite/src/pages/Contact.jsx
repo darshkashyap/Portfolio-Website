@@ -1,39 +1,49 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaEnvelope, FaGithub, FaLinkedin, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Contact = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <section id="contact" className="min-h-screen bg-black text-white px-6 py-20">
-      <div className="max-w-3xl mx-auto text-center">
+      <motion.div
+        className="max-w-3xl mx-auto text-center"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
         <h2 className="text-4xl font-bold mb-6 text-cyan-400">Get in Touch</h2>
         <p className="text-lg text-gray-400 mb-12">
-          I'm always open to opportunities, collaborations, or just a good tech chat. Feel free to reach out!
+          I'm always open to opportunities, collaborations, or a good tech chat. Feel free to reach out!
         </p>
 
-        {/* Contact Info */}
-        <div className="flex flex-col gap-4 items-center mb-8">
-          <div className="flex items-center gap-3 text-lg">
+        <div className="flex flex-col items-center gap-4 mb-10">
+          <motion.div
+            className="flex items-center gap-3 text-lg"
+            whileHover={{ scale: 1.05 }}
+          >
             <FaEnvelope className="text-cyan-400" />
             <span>dkdarshkashyap07@gmail.com</span>
-          </div>
+          </motion.div>
         </div>
 
-        {/* Social Media Icons */}
-        <div className="flex justify-center gap-6 text-2xl text-gray-300">
-          <a href="https://github.com/darshkashyap" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400">
-            <FaGithub />
-          </a>
-          <a href="https://www.linkedin.com/in/darsh-kashyap-020163369/" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400">
-            <FaLinkedin />
-          </a>
-          <a href="https://www.instagram.com/imustbedarsh" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400">
-            <FaInstagram />
-          </a>
-          <a href="https://x.com/imustbedarsh" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400">
-            <FaTwitter />
-          </a>
-        </div>
-      </div>
+        <motion.div
+          className="flex justify-center gap-6 text-2xl text-gray-300"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+        >
+          <motion.a whileHover={{ scale: 1.2 }} href="https://github.com/darshkashyap" className="hover:text-cyan-400"><FaGithub /></motion.a>
+          <motion.a whileHover={{ scale: 1.2 }} href="https://www.linkedin.com/in/darsh-kashyap-020163369/" className="hover:text-cyan-400"><FaLinkedin /></motion.a>
+          <motion.a whileHover={{ scale: 1.2 }} href="https://www.instagram.com/imustbedarsh" className="hover:text-cyan-400"><FaInstagram /></motion.a>
+          <motion.a whileHover={{ scale: 1.2 }} href="https://x.com/imustbedarsh" className="hover:text-cyan-400"><FaTwitter /></motion.a>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

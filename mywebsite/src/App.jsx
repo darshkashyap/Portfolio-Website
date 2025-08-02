@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Loading from './components/Loading';
+import BackgroundBlobs from './components/BackgroundBlobs';
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -13,21 +15,14 @@ import Contact from './pages/Contact';
 import './App.css';
 
 function App() {
-  const [isLoading, setIsLoading] = useState(() => {
-    // Check localStorage flag
-    return localStorage.getItem('hasLoadedBefore') !== 'true';
-  });
+  const [isLoading, setIsLoading] = useState(true); // Show loading on each visit
 
   useEffect(() => {
-    if (isLoading) {
-      const timer = setTimeout(() => {
-        setIsLoading(false);
-        // Set flag so loading screen doesn’t appear again
-        localStorage.setItem('hasLoadedBefore', 'true');
-      }, 3000);
-      return () => clearTimeout(timer);
-    }
-  }, [isLoading]);
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000); // Always show loading screen for 3 seconds
+    return () => clearTimeout(timer);
+  }, []);
 
   if (isLoading) {
     return <Loading />;
@@ -35,7 +30,11 @@ function App() {
 
   return (
     <Router>
-      <div className="bg-black text-white font-sans min-h-screen flex flex-col">
+      <div className="relative bg-black text-white font-sans min-h-screen flex flex-col overflow-hidden">
+        {/* Animated Background */}
+        <BackgroundBlobs />
+
+        {/* Layout */}
         <Header />
         <main className="flex-grow">
           <Routes>
