@@ -32,6 +32,7 @@ const Home = () => {
         transition={{ delay: 0.6 }}
       >
         I'm a passionate web developer from India, focused on building fast, responsive, and modern web applications using React, Tailwind CSS, and Node.js. I love writing clean code and creating intuitive user experiences.
+        <br/> Currently Working on Building Projects Using Framer-motion.
       </motion.p>
     </section>
   );
