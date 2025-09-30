@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { FaEnvelope, FaGithub, FaLinkedin, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin, FaInstagram, FaTwitter, FaDownload } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -8,6 +8,18 @@ const Contact = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+
+  const handleDownloadResume = () => {
+    // Option B: PDF in public folder
+    const resumeUrl = '/resume.pdf';
+    
+    const link = document.createElement('a');
+    link.href = resumeUrl;
+    link.setAttribute('download', 'Darsh_Kashyap_Resume.pdf');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <section id="contact" className="min-h-screen bg-black text-white px-6 py-20">
@@ -21,6 +33,17 @@ const Contact = () => {
         <p className="text-lg text-gray-400 mb-12">
           I'm always open to opportunities, collaborations, or a good tech chat. Feel free to reach out!
         </p>
+
+        {/* Download Resume Button - Added this section */}
+        <motion.button
+          onClick={handleDownloadResume}
+          className="flex items-center gap-2 mx-auto mb-10 px-6 py-3 bg-cyan-500 text-black font-semibold rounded-lg hover:bg-cyan-400 transition-colors"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <FaDownload />
+          Download Resume
+        </motion.button>
 
         <div className="flex flex-col items-center gap-4 mb-10">
           <motion.div
