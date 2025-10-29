@@ -34,15 +34,15 @@ const Contact = () => {
         </p>
 
         
-       // <motion.button
-       //   onClick={handleDownloadResume}
-       //   className="flex items-center gap-2 mx-auto mb-10 px-6 py-3 bg-cyan-500 text-black font-semibold rounded-lg hover:bg-cyan-400 transition-colors"
-       //   whileHover={{ scale: 1.05 }}
-       //   whileTap={{ scale: 0.95 }}
-      //  >
-        //  <FaDownload />
-       //   Download Resume
-     //   </motion.button>
+       {/* <motion.button
+          onClick={handleDownloadResume}
+          className="flex items-center gap-2 mx-auto mb-10 px-6 py-3 bg-cyan-500 text-black font-semibold rounded-lg hover:bg-cyan-400 transition-colors"
+          whileHover={{ scale: 1.05 }}
+         whileTap={{ scale: 0.95 }}
+        >
+         <FaDownload />
+          Download Resume
+        </motion.button> */}
 
         <div className="flex flex-col items-center gap-4 mb-10">
           <motion.div
