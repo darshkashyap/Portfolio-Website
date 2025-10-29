@@ -10,7 +10,6 @@ const Contact = () => {
   }, []);
 
   const handleDownloadResume = () => {
-    // Option B: PDF in public folder
     const resumeUrl = '/resume.pdf';
     
     const link = document.createElement('a');
