@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { FaEnvelope, FaGithub, FaLinkedin, FaInstagram, FaTwitter, FaDownload } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin, FaInstagram, FaTwitter } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -9,15 +9,16 @@ const Contact = () => {
     AOS.init({ duration: 1000 });
   }, []);
 
- // const handleDownloadResume = () => {
-  //  const resumeUrl = '/resume.pdf';
-    //const link = document.createElement('a');
-    //link.href = resumeUrl;
-    //link.setAttribute('download', 'Darsh_Kashyap_Resume.pdf');
-    //document.body.appendChild(link);
-    //link.click();
-    //document.body.removeChild(link);
-  //};
+  // If you want to add download resume later, uncomment this:
+  // const handleDownloadResume = () => {
+  //   const resumeUrl = '/resume.pdf';
+  //   const link = document.createElement('a');
+  //   link.href = resumeUrl;
+  //   link.setAttribute('download', 'Darsh_Kashyap_Resume.pdf');
+  //   document.body.appendChild(link);
+  //   link.click();
+  //   document.body.removeChild(link);
+  // };
 
   return (
     <section id="contact" className="min-h-screen bg-black text-white px-6 py-20">
@@ -32,7 +33,7 @@ const Contact = () => {
           I'm always open to opportunities, collaborations, or a good tech chat. Feel free to reach out!
         </p>
 
-       
+        {/* If you want the download button, uncomment this:
         <motion.button
           onClick={handleDownloadResume}
           className="flex items-center gap-2 mx-auto mb-10 px-6 py-3 bg-cyan-500 text-black font-semibold rounded-lg hover:bg-cyan-400 transition-colors"
@@ -42,6 +43,7 @@ const Contact = () => {
           <FaDownload />
           Download Resume
         </motion.button>
+        */}
 
         <div className="flex flex-col items-center gap-4 mb-10">
           <motion.div
@@ -59,10 +61,42 @@ const Contact = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
-          <motion.a whileHover={{ scale: 1.2 }} href="https://github.com/darshkashyap" className="hover:text-cyan-400"><FaGithub /></motion.a>
-          <motion.a whileHover={{ scale: 1.2 }} href="https://www.linkedin.com/in/darshkashyap/" className="hover:text-cyan-400"><FaLinkedin /></motion.a>
-          <motion.a whileHover={{ scale: 1.2 }} href="https://www.instagram.com/imustbedarsh" className="hover:text-cyan-400"><FaInstagram /></motion.a>
-          <motion.a whileHover={{ scale: 1.2 }} href="https://x.com/imustbedarsh" className="hover:text-cyan-400"><FaTwitter /></motion.a>
+          <motion.a 
+            href="https://github.com/darshkashyap" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.2 }} 
+            className="hover:text-cyan-400"
+          >
+            <FaGithub />
+          </motion.a>
+          <motion.a 
+            href="https://www.linkedin.com/in/darshkashyap/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.2 }} 
+            className="hover:text-cyan-400"
+          >
+            <FaLinkedin />
+          </motion.a>
+          <motion.a 
+            href="https://www.instagram.com/imustbedarsh" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.2 }} 
+            className="hover:text-cyan-400"
+          >
+            <FaInstagram />
+          </motion.a>
+          <motion.a 
+            href="https://x.com/imustbedarsh" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.2 }} 
+            className="hover:text-cyan-400"
+          >
+            <FaTwitter />
+          </motion.a>
         </motion.div>
       </motion.div>
     </section>
