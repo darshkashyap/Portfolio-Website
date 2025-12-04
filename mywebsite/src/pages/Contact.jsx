@@ -9,17 +9,15 @@ const Contact = () => {
     AOS.init({ duration: 1000 });
   }, []);
 
-  const handleDownloadResume = () => {
-    // Option B: PDF in public folder
-    const resumeUrl = '/resume.pdf';
-    
-    const link = document.createElement('a');
-    link.href = resumeUrl;
-    link.setAttribute('download', 'Darsh_Kashyap_Resume.pdf');
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+ // const handleDownloadResume = () => {
+  //  const resumeUrl = '/resume.pdf';
+    //const link = document.createElement('a');
+    //link.href = resumeUrl;
+    //link.setAttribute('download', 'Darsh_Kashyap_Resume.pdf');
+    //document.body.appendChild(link);
+    //link.click();
+    //document.body.removeChild(link);
+  //};
 
   return (
     <section id="contact" className="min-h-screen bg-black text-white px-6 py-20">
