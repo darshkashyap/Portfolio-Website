@@ -28,6 +28,8 @@ const About = () => {
           <span className="text-white font-semibold"> React</span>, <span className="text-white font-semibold">Tailwind CSS</span>, and <span className="text-white font-semibold">Node.js</span>.
         </motion.p>
 
+        <motion.p className='text-lg text-gray-300 leading-relaxed mb-7 font-bold'>Currently Learning Typescript and building a production ready Clothes selling App</motion.p>
+
         <motion.p
           className="text-lg text-gray-300 leading-relaxed mb-6"
           data-aos="fade-up"
