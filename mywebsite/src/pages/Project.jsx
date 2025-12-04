@@ -21,6 +21,10 @@ const projects = [
     title: 'BlogApp Fullstack',
     link: 'https://github.com/darshkashyap/BlogApp',
     description: 'A full-stack blog application with user authentication, CRUD operations, and a responsive design.',
+  },
+  {title:'MyntraClone',
+    link:"https://github.com/darshkashyap/MyntraClone",
+    description:'Currently Building a Fullstack production ready Clothes selling app.',
   }
 ];
 
