@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <header className="bg-black text-white py-8 shadow-md">
       <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-        {/* Logo / Name */}
+       
         <motion.div
           className="text-3xl font-bold tracking-wide text-blue-400 hover:text-white transition duration-300"
           initial={{ opacity: 0, x: -20 }}
@@ -33,7 +33,7 @@ const Header = () => {
           <Link to="/">Darsh Kashyap</Link>
         </motion.div>
 
-        {/* Navigation Links */}
+       
         <nav className="flex gap-6 mt-4 md:mt-0 text-lg">
           {navLinks.map((link, i) => (
             <motion.div
@@ -51,7 +51,7 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Social Icons */}
+        
         <motion.div
           className="flex gap-4 mt-4 md:mt-0 text-xl"
           initial={{ opacity: 0 }}

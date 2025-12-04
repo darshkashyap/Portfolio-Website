@@ -10,7 +10,7 @@ const Loading = () => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        {/* Spinning Glow Ring */}
+        
         <motion.div
           className="w-24 h-24 border-4 border-cyan-500 border-t-transparent rounded-full"
           animate={{ rotate: 360 }}
@@ -21,7 +21,7 @@ const Loading = () => {
           }}
         />
 
-        {/* Typing-style Animated Text */}
+       
         <motion.div
           className="text-xl font-mono text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -31,7 +31,7 @@ const Loading = () => {
           <span className="text-cyan-400">Loading</span> Darsh Kashyap's Portfolio...
         </motion.div>
 
-        {/* Bouncing dots */}
+        
         <div className="flex space-x-2">
           {[0, 1, 2].map((i) => (
             <motion.span

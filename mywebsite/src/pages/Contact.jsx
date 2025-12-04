@@ -32,7 +32,7 @@ const Contact = () => {
           I'm always open to opportunities, collaborations, or a good tech chat. Feel free to reach out!
         </p>
 
-        {/* Download Resume Button - Added this section */}
+       
         <motion.button
           onClick={handleDownloadResume}
           className="flex items-center gap-2 mx-auto mb-10 px-6 py-3 bg-cyan-500 text-black font-semibold rounded-lg hover:bg-cyan-400 transition-colors"
@@ -60,7 +60,7 @@ const Contact = () => {
           transition={{ delay: 0.4 }}
         >
           <motion.a whileHover={{ scale: 1.2 }} href="https://github.com/darshkashyap" className="hover:text-cyan-400"><FaGithub /></motion.a>
-          <motion.a whileHover={{ scale: 1.2 }} href="https://www.linkedin.com/in/darsh-kashyap-020163369/" className="hover:text-cyan-400"><FaLinkedin /></motion.a>
+          <motion.a whileHover={{ scale: 1.2 }} href="https://www.linkedin.com/in/darshkashyap/" className="hover:text-cyan-400"><FaLinkedin /></motion.a>
           <motion.a whileHover={{ scale: 1.2 }} href="https://www.instagram.com/imustbedarsh" className="hover:text-cyan-400"><FaInstagram /></motion.a>
           <motion.a whileHover={{ scale: 1.2 }} href="https://x.com/imustbedarsh" className="hover:text-cyan-400"><FaTwitter /></motion.a>
         </motion.div>

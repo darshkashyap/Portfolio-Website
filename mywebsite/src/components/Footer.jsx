@@ -18,12 +18,12 @@ const Footer = () => {
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
       >
-        {/* Text */}
+       
         <p className="text-sm mb-4 md:mb-0">
           © {new Date().getFullYear()} Darsh Kashyap. All rights reserved.
         </p>
 
-        {/* Social Icons */}
+        
         <div className="flex gap-6 text-xl">
           <motion.a
             href="https://github.com/darshkashyap"

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const Home = () => {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 bg-black text-white overflow-hidden">
-      {/* Profile Image */}
+      
       <motion.img
         src="/Darsh.png"
         alt="Darsh Kashyap"
@@ -14,7 +14,7 @@ const Home = () => {
         transition={{ duration: 1 }}
       />
 
-      {/* Heading */}
+      
       <motion.h1
         className="text-4xl md:text-6xl font-bold mb-4 z-10"
         initial={{ opacity: 0, y: 20 }}
@@ -24,7 +24,7 @@ const Home = () => {
         Hi, I'm <span className="text-blue-400">Darsh Kashyap</span>
       </motion.h1>
 
-      {/* Description */}
+      
       <motion.p
         className="text-lg text-gray-300 max-w-2xl z-10"
         initial={{ opacity: 0 }}
